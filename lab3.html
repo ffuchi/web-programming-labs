@@ -40,6 +40,16 @@
             opacity: 1;
             color: darkblue;
         }
+        .shadow {
+            text-shadow: 10px 5px 3px gray;
+        }
+        .h1{
+            color:blue;
+            transition: 600ms 1s;
+        }
+        .h1:hover {
+            text-shadow: 5px 5px 5px rgb(108, 108, 228);
+        }
     </style>
 </head>
 <body>
@@ -48,7 +58,7 @@
     </header>
     
     <main> 
-        <h1>Расчет (формула)</h1>
+        <h1 class="h1">Расчет (формула)</h1>
 
         <div>
             Расчет сводится к определению разницы между активами и пассивами
@@ -97,6 +107,9 @@
         <div class="formula">
             Чистые активы = стр.1300 - ЗУ + ДБП
         </div>
+        <div class="shadow">Тень</div>
+        <div style="text-shadow: -10px 5px 3px #7a7ac0;">Синяя тень слева снизу</div>
+        <div style="text-shadow: 0 0 3px blue;">Синее размытие</div>
     </main>
     
     <footer>
