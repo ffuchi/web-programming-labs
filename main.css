@@ -10,7 +10,16 @@ header {
     color: aliceblue; 
     padding: 5px;
     font-size: 16pt;
+    transition: 500ms;
 }
+header:hover {
+    font-weight: bold;
+}
+header:active {
+    color: deeppink;
+    font-size: 20pt;
+}
+
 
 footer {
     background: linear-gradient(to right , red, orange, yellow, green,blue,violet);
@@ -20,6 +29,15 @@ footer {
     font-style: italic;
     text-align: right;
 }
+footer:hover {
+    font-weight: bold;
+}
+footer:active {
+    color: black;
+    font-size: 15pt;
+}
+
+
 
 a {
     color: rgb(0, 180, 39);
