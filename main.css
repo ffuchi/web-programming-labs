@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(230, 252, 255); 
+    color: rgb(0, 3, 155); 
+    font-family: Arial; 
+    margin: 0px;
+}
+
+header {
+    background-color: black;
+    color: aliceblue; 
+    padding: 5px;
+    font-size: 16pt;
+}
+
+footer {
+    background-color: black;
+    color: aliceblue; 
+    padding: 5px;
+    font-size: 11pt;
+    font-style: italic;
+    text-align: right;
+}
