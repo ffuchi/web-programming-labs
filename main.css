@@ -20,3 +20,26 @@ footer {
     font-style: italic;
     text-align: right;
 }
+
+a {
+    color: rgb(0, 180, 39);
+    text-decoration: none;
+}
+
+a:visited {
+    color:blueviolet;
+    background-color:gray ;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+    background-color: white;
+    font-weight: bold;
+}
+
+a:active {
+    color:pink;
+    background-color:greenyellow;
+}
+
