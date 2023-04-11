@@ -16,6 +16,18 @@
             height: 250px;
             overflow-y: auto;
             overflow-x: hidden;
+            position: relative;
+            background: linear-gradient(27deg, rgb(207, 182, 253), rgb(124 223 255));
+            z-index: 2;
+        }
+        .second {
+            z-index: 1;
+            left: 250px;
+            top: 100px;
+            position: fixed;
+        }
+        .second:hover {
+            z-index: 3;
         }
     </style>
 </head>
@@ -36,7 +48,7 @@
             Это мне плюс.
         </div>
             
-        <div>
+        <div class="second">
             Ещё один важный момент: хотя это и учебник по финансовым рынкам, 
             «Хулиномика» – не вполне научная книга, потому что, во-первых, при сборе материалов 
             я не записывал источники и далеко не всегда их указываю; во-вторых, привожу размышления 
