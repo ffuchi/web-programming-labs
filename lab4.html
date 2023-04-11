@@ -7,22 +7,39 @@
     <title>Мальцева Дарья Алексеевна. Лабораторная 3</title>
     <link rel="stylesheet" href="main.css">
     <style>
-        div {
+        main div {
             margin: 20px;
             border: 1px solid;
             border-radius: 7px;
             padding: 7px;
             width: 500px;
-            height: 250px;
+            height: 150px;
             overflow-y: auto;
             overflow-x: hidden;
             position: relative;
             background: linear-gradient(27deg, rgb(207, 182, 253), rgb(124 223 255));
             z-index: 2;
         }
+        aside {
+            position: absolute;
+            left: 0;
+            width: 300px;
+            background: black;
+            height: 100%;
+            overflow: auto;
+        }
+        aside div {
+            color: antiquewhite;
+            padding: 10px;
+            text-align: justify;
+            text-indent: 20px;
+        }
+        main {
+            margin-left: 320px;
+        }
         .second {
             z-index: 1;
-            left: 250px;
+            left: 450px;
             top: 100px;
             position: fixed;
         }
@@ -37,7 +54,9 @@
         НГТУ, ФБ, Лабораторная работа 4
     </header>
 
-    <main>
+    <aside>
+        <div> Об этой книге</div>
+
         <div>
             Сперва я должен сказать, что не вся информация в книге собрана лично мной: 
             примерно 2/3 книги основаны на моих лекциях курса «Международные фондовые рынки» 
@@ -47,7 +66,9 @@
             объяснений – не моего авторства, а товарища Шиллера. Однако вторая половина – моя. 
             Это мне плюс.
         </div>
-            
+    </aside>
+
+    <main>
         <div class="second">
             Ещё один важный момент: хотя это и учебник по финансовым рынкам, 
             «Хулиномика» – не вполне научная книга, потому что, во-первых, при сборе материалов 
@@ -56,7 +77,6 @@
             всего лишь моё личное мнение; и, в-третьих, я не раз пользовался Википедией – что, 
             очевидно, не есть научная рецензируемая литература.
         </div>
-
         <div>
             Личное же мое мнение основано на неплохом опыте создания, продажи и банкротства разных 
             изнесов, успешной торговли на мировых биржах, пятилетнем опыте преподавания и научного 
