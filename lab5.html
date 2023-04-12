@@ -11,7 +11,11 @@
             let a = 5154;
             let b = 7891;
             let result = a+b;
-            alert('Сумма ' + a + ' и ' + b + ' равна ' + result)
+            alert('Сумма ' + a + ' и ' + b + ' равна ' + result);
+        }
+        function showAuthor() {
+            let author = 'Автор этой страницы:\nМальцева Дарья Алексеевна\nMeowMeowMeow';
+            alert(author)
         }
     </script>
     <style>
@@ -29,16 +33,16 @@
 </head>
 
 <body>
-    <header>
+    <header onclick="showAuthor()">
         НГТУ, ФБ, Лабораторная работа 5
     </header>
 
     <main>
         <div class="messege" onclick="showSum()">Сколько будет 5154+7891?</div>
-        <div class="messege">Узнать, кто автор страницы</div>
+        <div class="messege" onclick="showAuthor()">Узнать, кто автор страницы</div>
     </main>
 
-    <footer style="bottom: 0; right: 0; left: 0; position: fixed;">
+    <footer style="bottom: 0; right: 0; left: 0; position: fixed;" onclick="showAuthor()">
         &copy; Дарья Мальцева, ФБИ-13, 2 курс, 2023
     </footer>
 </body>
