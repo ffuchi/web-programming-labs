@@ -77,8 +77,12 @@
             resultat.innerHTML = 'Общая цена: ' + result + ' p';
 
         }
-        
+        function showKrug(num) {
+            let krug = document.getElementById(num);
+            krug.style.opacity = 0;
+        }
     </script>
+
     <style>
         .messege {
             width: 250px;
@@ -105,6 +109,18 @@
             padding: 10px;
         }
 
+        .krug {
+            margin-top: 30px;
+            margin-left: 5px;
+            width: 30px;
+            height: 24px;
+            text-align: center;
+            border: 3px solid plum;
+            border-radius: 50%;
+            padding-top: 6px;
+            display: inline-block;
+        }
+        
     </style>
 </head>
 
@@ -140,6 +156,16 @@
             <p id="resultat"></p>
         </div>
 
+        <div class = 'krug' id="1"  style="color: darkorchid; background-color: darkblue;" onclick="showKrug(1)">1</div>
+        <div class = 'krug' id="2"  style="color:aquamarine; background-color: fuchsia" onclick="showKrug(2)">2</div>
+        <div class = 'krug' id="3"  style="color:lightcoral; background-color:indigo" onclick="showKrug(3)">3</div>
+        <div class = 'krug' id="4"  style="color:pink; background-color: black" onclick="showKrug(4)">4</div>
+        <div class = 'krug' id="5"  style="color:dodgerblue ;background-color: navy" onclick="showKrug(5)">5</div>
+        <div class = 'krug' id="6"  style="color:springgreen ; background-color: dimgrey" onclick="showKrug(6)">6</div>
+        <div class = 'krug' id="7"  style="color:honeydew ; background-color: deeppink" onclick="showKrug(7)">7</div>
+        <div class = 'krug' id="8"  style="color:red ; background-color: palegreen" onclick="showKrug(8)">8</div>
+        <div class = 'krug' id="9"  style="color:linen ;background-color: midnightblue" onclick="showKrug(9)">9</div>
+        <div class = 'krug' id="10" style="color:steelblue ;background-color: lightsalmon;" onclick="showKrug(10)">10</div>
 
     </main>
 
