@@ -47,12 +47,13 @@
             let result = a/b;
             alert(a + ' поделить на ' + b + ' = ' + result);
         }
-        function changeOutput(buttonNum, backColor, textColor, borderColor) {
+        function changeOutput(buttonNum, backColor, textColor, border) {
             let output = document.getElementById('output');
             output.innerHTML = 'Нажата кнопка' + buttonNum
             output.style.backgroundColor = backColor;
             output.style.color = textColor;
-            
+            output.style.borderBlock = border;
+            output.style.borderInline = border;
         }
         
     </script>
@@ -69,7 +70,7 @@
         }
 
         #output {
-            border: 1px solid;
+            border: 2px solid;
             width: 300px;
             height: 40px;
         }
@@ -91,10 +92,10 @@
         <div class="messege" onclick="showDelenie()">Найти деление</div>
 
         <div>
-            <input type="button" value="Кнопка 1" onclick="changeOutput(1,'red','yellow','blue')">
-            <input type="button" value="Кнопка 2"onclick="changeOutput(2,'black','lime')">
-            <input type="button" value="Кнопка 3"onclick="changeOutput(3,'white', 'purple')">
-            <input type="button" value="Кнопка 4"onclick="changeOutput(4,'black','pink')">
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1,'red','yellow','dotted')">
+            <input type="button" value="Кнопка 2"onclick="changeOutput(2,'black','lime','dotted')">
+            <input type="button" value="Кнопка 3"onclick="changeOutput(3,'white', 'purple','dotted')">
+            <input type="button" value="Кнопка 4"onclick="changeOutput(4,'black','pink','dotted')">
         </div>
         <div id="output"></div>
     </main>
