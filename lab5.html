@@ -49,11 +49,33 @@
         }
         function changeOutput(buttonNum, backColor, textColor, border) {
             let output = document.getElementById('output');
-            output.innerHTML = 'Нажата кнопка' + buttonNum
+            output.innerHTML = 'Нажата кнопка' + buttonNum;
             output.style.backgroundColor = backColor;
             output.style.color = textColor;
             output.style.borderBlock = border;
             output.style.borderInline = border;
+        }
+        function changeRaschet() {
+            let input1 = document.getElementById('number1');
+            let input2 = document.getElementById('number2');
+            let input3 = document.getElementById('number3');
+            let input4 = document.getElementById('number4');
+            
+            let resultat = document.getElementById('resultat');
+
+            let a = 20;
+            let b = 20;
+            let c = 64;
+            let d = 28;
+            
+            let a1 = parseInt(input1.value);
+            let b2 = parseInt(input2.value);
+            let c3 = parseInt(input3.value);
+            let d4 = parseInt(input4.value);
+
+            let result = a*a1+b*b2+c*c3+d*d4;
+            resultat.innerHTML = 'Общая цена: ' + result + ' p';
+
         }
         
     </script>
@@ -74,6 +96,15 @@
             width: 300px;
             height: 40px;
         }
+
+        .korzina {
+            border: 2px solid plum;
+            border-radius: 5px;
+            width: 400px;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
     </style>
 </head>
 
@@ -98,6 +129,18 @@
             <input type="button" value="Кнопка 4"onclick="changeOutput(4,'black','pink','dotted')">
         </div>
         <div id="output"></div>
+
+        <div class = 'korzina'>
+            <h2>Корзина товаров</h2>
+            <label>Семена томатов "Алеша Попович" (20р/шт): <br><input type="number" value="0" min="0" id="number1"></label><br>
+            <label>Семена редиса "Аврора" (20р/шт): <br><input type="number" value="0" min="0" id="number2"></label><br>
+            <label>Семена моркови "Дарина" (64р/шт): <br><input type="number" value="0" min="0" id="number3"></label><br>
+            <label>Семена пастернака "Русский размер" (28р/шт): <br><input type="number" value="0" min="0" id="number4"></label><br>
+            <input type="button" value="Рассчитать" onclick="changeRaschet()">
+            <p id="resultat"></p>
+        </div>
+
+
     </main>
 
     <footer style="bottom: 0; right: 0; left: 0; position: fixed;" onclick="showAuthor()">
