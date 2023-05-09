@@ -22,6 +22,15 @@
             margin: 10px auto;
             padding: 5px;
         }
+
+        .color {
+            border: 3px solid black;
+            width: 400px;
+            margin: 20px;
+            padding: 10px;
+            text-align: center;
+            background-color: yellow;
+        }
     </style>
     <script>
         let number;
@@ -79,6 +88,34 @@
             screens[2].style.display = 'none';
         }
             
+        function changeColor(div) {
+            if(div.style.backgroundColor == 'yellow') {
+                div.style.backgroundColor = 'red';
+                div.style.color = 'lightcyan';
+                document.getElementById('color-name').innerHTML = 'красный';
+            }
+            else if (div.style.backgroundColor == 'red') {
+                div.style.backgroundColor = 'black';
+                div.style.color = 'violet';
+                document.getElementById('color-name').innerHTML = 'чёрный';
+            }
+            else if (div.style.backgroundColor == 'black') {
+                div.style.backgroundColor = 'purple';
+                div.style.color = 'white';
+                document.getElementById('color-name').innerHTML = 'чёрный';
+            }
+            else if (div.style.backgroundColor == 'purple') {
+                div.style.backgroundColor = 'pink';
+                div.style.color = 'black';
+                document.getElementById('color-name').innerHTML = 'чёрный';
+            }
+            else {
+                div.style.backgroundColor = 'yellow';
+                document.getElementById('color-name').innerHTML = 'жёлтый';
+            }
+            
+        }
+
     </script>
 </head>
 <body>
@@ -132,6 +169,11 @@
                     <li>Если захотите еще раз сыграть, то нажмите на кнопку Сыграть еще раз</li>
                 </ol>
             </div>
+        </div>
+
+        <div class="color" ondblclick="changeColor(this)">
+            Цвет: <span id="color-name">жёлтый</span><br>
+            Сделайте двойной щелчок, чтобы сменить.
         </div>
 
     </main>
