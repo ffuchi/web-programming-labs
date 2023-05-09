@@ -49,8 +49,8 @@
             padding: 10px;
             margin: 20px;
             hyphens: auto;
-            position: absolute;
-            top: 305px;
+            position: relative;
+            top: 50px;
         }
         .filter {
             border: 3px solid black;
@@ -61,8 +61,8 @@
             padding: 10px;
             margin: 20px;
             hyphens: auto;
-            position: absolute;
-            top: 400px;
+            position: relative;
+            top: 60px;
         }
     </style>
     <script>
@@ -156,7 +156,7 @@
             div.style.position = 'absolute';
             if (positionLeft == true) {
                 div.style.transition = '2s';
-                div.style.right = '20px';
+                div.style.right = '10px';
                 div.style.transformation = 'rotate(0)';
                 positionLeft = false;
                 div.style.backgroundColor = 'black';
@@ -164,7 +164,7 @@
             }
             else {
                 div.style.transition = '2s';
-                div.style.left = '20px';
+                div.style.left = '10px';
                 div.style.transformation = 'rotate(4turn)';
                 positionLeft = true;
                 div.style.backgroundColor = 'pink';
