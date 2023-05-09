@@ -39,6 +39,19 @@
             color: black;
             cursor: pointer;
         }
+        .expanding {
+            border: 3px solid black;
+            width: 100px;
+            cursor: pointer;
+            text-align: center;
+            background-color: orange;
+            color: black;
+            padding: 10px;
+            margin: 20px;
+            hyphens: auto;
+            position: absolute;
+            top: 305px;
+        }
 
     </style>
     <script>
@@ -146,7 +159,21 @@
                 div.style.backgroundColor = 'pink';
                 div.style.color = 'black';
             }
+            
         }
+        
+        let count2 = 2;
+        function ExpandingBlock(div) {
+            count2++;
+            if (count2 < (1000/50+1)) {
+                div.style.width = (50*count2)+'px';
+            }
+            else {
+                div.style.width = '100px';
+                count2=2;
+            }
+        }
+
     </script>
 </head>
 <body>
@@ -210,6 +237,9 @@
         <div class="click" onclick="changeClick(this)">
             Щёлкни меня
         </div>
+
+        <div class="expanding" onclick="ExpandingBlock(this)">Расширяющийся блок</div>
+
     </main>
 
     <footer>
