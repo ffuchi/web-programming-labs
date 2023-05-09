@@ -22,7 +22,6 @@
             margin: 10px auto;
             padding: 5px;
         }
-
         .color {
             border: 3px solid black;
             width: 400px;
@@ -31,6 +30,16 @@
             text-align: center;
             background-color: yellow;
         }
+        .click {
+            border: 3px solid black;
+            width: 150px;
+            padding: 10px;
+            text-align: center;
+            background-color: pink;
+            color: black;
+            cursor: pointer;
+        }
+
     </style>
     <script>
         let number;
@@ -115,7 +124,29 @@
             }
             
         }
-
+        
+        let positionLeft = true;
+        function changeClick(div) {
+            div.style.left = null;
+            div.style.right = null;
+            div.style.position = 'absolute';
+            if (positionLeft == true) {
+                div.style.transition = '2s';
+                div.style.right = '20px';
+                div.style.transformation = 'rotate(0)';
+                positionLeft = false;
+                div.style.backgroundColor = 'black';
+                div.style.color = 'pink';
+            }
+            else {
+                div.style.transition = '2s';
+                div.style.left = '20px';
+                div.style.transformation = 'rotate(4turn)';
+                positionLeft = true;
+                div.style.backgroundColor = 'pink';
+                div.style.color = 'black';
+            }
+        }
     </script>
 </head>
 <body>
@@ -176,6 +207,9 @@
             Сделайте двойной щелчок, чтобы сменить.
         </div>
 
+        <div class="click" onclick="changeClick(this)">
+            Щёлкни меня
+        </div>
     </main>
 
     <footer>
