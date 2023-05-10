@@ -82,6 +82,17 @@
                 }
             }
         }
+
+        function multiplicationTable() {
+            let blocks = document.getElementById('blocksTab');
+            let stud = (97+10);
+
+            for (let i=13; i<34 ;i++) {
+                let block = document.createElement('div');
+                block.innerHTML = i + " * " + stud + " = " + (i*stud)
+                blocks.appendChild(block)
+            }
+        }
     </script>
 </head>
 <body>
@@ -100,9 +111,12 @@
         <button  onclick="addTransparentBlocks()">Создать полупрозрачные блоки</button>
         <div id="transparent-blocks"></div>
 
-        <input type="number" value="5" id="switch" placeholder="Введите число кругов"><br>
+        <input type="number" value="5" id="switch" placeholder="Введите число кругов">
         <button onclick="radGreen()">красное/зеленое</button>
         <div id="circles"></div>
+
+        <button onclick="multiplicationTable()">Таблица умножения на 107</button>
+        <div id="blocksTab"></div>
     </main>
 
     <footer>
