@@ -93,6 +93,13 @@
                 blocks.appendChild(block)
             }
         }
+    
+        function stockPrice() {
+            let date = [08.05.2023, 05.05.2023, 04.05.2023, 03.05.2023, 02.05.2023,
+                        28.04.2023, 27.04.2023, 26.04.2023, 25.04.2023, 24.04.2023];
+            let price = [];
+            let diff = [];
+        }
     </script>
 </head>
 <body>
@@ -117,6 +124,9 @@
 
         <button onclick="multiplicationTable()">Таблица умножения на 107</button>
         <div id="blocksTab"></div>
+
+        <button onclick="stockPrice()">Курс акций Центральный телеграф</button>
+        <table border="1" id="stock"></table>
     </main>
 
     <footer>
