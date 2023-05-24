@@ -8,3 +8,13 @@ function showDate() {
                     + '</br>' + 'Дата и время для пакистанской локали: ' + today.toLocaleString('ur-PK')
                     + '</br>' + 'Дата и время для китайской локали: ' + today.toLocaleString('zh-CN');
 }
+
+function showDaysCount() {
+    let today = new Date();
+    let inputDate = document.querySelector('input[type=date]');
+    let birthday = new Date(inputDate.value);
+    let count = document.getElementById('count-days');
+    let daysCount = (today - birthday)/1000/60/60/24;
+    daysCount = Math.floor(daysCount);
+    count.innerHTML = 'Количество дней с даты рождения: ' + daysCount;
+}
